@@ -12,12 +12,12 @@ function setupApp() {
   });
   app.get("/", first, (req, res) => res.send("Hello World!"));
 
-  const second = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 10, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
-    store,
-  });
-  app.get("/", second, (req, res) => res.send("Hello World!"));
+  //   const second = rateLimit({
+  //     windowMs: 15 * 60 * 1000, // 15 minutes
+  //     max: 10, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  //     store,
+  //   });
+  //   app.get("/", second, (req, res) => res.send("Hello World!"));
 
   return app;
 }
